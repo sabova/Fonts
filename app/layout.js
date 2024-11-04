@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { CartProvider } from '../context/CartContext';
 import CartIcon from '../components/CartIcon';
 import { usePathname } from 'next/navigation';
+import Script from "next/script";
 
 const poppins = Poppins({ subsets: ['latin'], weight: '500' });
 
@@ -14,6 +15,22 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <Script
+        src="https://analytics.sabrinagoom.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+        data-domain="fonts.sabrinagoom.com"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="plausible-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.plausible = window.plausible || function() { 
+              (window.plausible.q = window.plausible.q || []).push(arguments) 
+            }
+          `,
+        }}
+      />
       <body className={`${poppins.className} bg-[#f9fafb] text-zinc-950 h-screen overflow-hidden`}>
         <CartProvider>
           <div className="h-full flex flex-col p-6">
