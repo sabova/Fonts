@@ -10,6 +10,11 @@ import Script from "next/script";
 
 const poppins = Poppins({ subsets: ['latin'], weight: '500' });
 
+export const metadata = {
+  title: 'Fonts',
+  description: 'Personal font collection site as well as search by image tool',
+};
+
 export default function RootLayout({ children }) {
   const pathname = usePathname();
 
