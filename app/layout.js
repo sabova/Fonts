@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
                 {children}
               </main>
               <div className="pt-6 text-center text-sm text-gray-500">
-                © 2024 <a className="font-semibold text-[#70b244] hover:text-[#63a239] transition" href="https://sabrinagoom.com">Sabrina Goom</a>, made with 💚
+                © 2025 <a className="font-semibold text-[#70b244] hover:text-[#63a239] transition" href="https://sabrinagoom.com">Sabrina Goom</a>, made with 💚
               </div>
             </div>
           </CartProvider>
